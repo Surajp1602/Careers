@@ -1,50 +1,43 @@
-import '@styles/globals.css';
-import Images from 'next/image'
+import "@styles/globals.css";
+import Images from "next/image";
 
-
-import Navbar from '@components/Navbar';
-import Hero from '@components/Hero';
-import NewResource from '@components/NewResource';
-import NewEvents from '@components/NewEvents';
-
-
+import Navbar from "@components/Navbar";
+import Hero from "@components/Hero";
+import NewResource from "@components/NewResource";
+import NewEvents from "@components/NewEvents";
 
 export const metadata = {
-    title: "Career",
-    description: "Discover and Explore"
-}
+  title: "Career",
+  description: "Discover and Explore",
+};
 
-const RootLayout = ( { children } ) => {
+const RootLayout = ({ children }) => {
   return (
-    <html lang='en'>
-        <body>
-            <div className="main">
-                <div className="gradient"/>
-            </div>
+    <html lang="en">
+      <body>
+        <div className="main">
+          <div className="gradient" />
+        </div>
 
         <main className="app">
+          <Hero />
+          <br />
+          <br />
+          <br />
 
-            <Hero/>
-            <br />
-            <br />
-            <br />
+          <NewResource />
 
-            <NewResource/>
+          <br />
+          <br />
+          <br />
 
-            <br />
-            <br />
-            <br />
+          <NewEvents />
 
-            <NewEvents/>
-            
-            { children }
-
+          {children}
         </main>
-        </body>
+      </body>
     </html>
-  )
-}
+  );
+};
 
 export default RootLayout;
-
-
